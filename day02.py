@@ -1,5 +1,3 @@
-import math
-
 def range_check(rng):
     ids = rng.split("-")
     invalids2 = 0

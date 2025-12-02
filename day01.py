@@ -1,5 +1,3 @@
-import math
-
 def state(dir, mag, previous):
     zeros = mag//100
     match dir:
