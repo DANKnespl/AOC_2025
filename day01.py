@@ -10,11 +10,8 @@ def state(dir, mag, previous):
                 zeros += 1
             
             return (previous + mag)%100, zeros
-        
-
 
 if __name__=="__main__":
-    
     f = open("data/day01.txt")
     lines = f.readlines()
     f.close()
@@ -27,4 +24,4 @@ if __name__=="__main__":
         zeros_count2 += cn
         if st == 0:
             zeros_count += 1
-    print(zeros_count, zeros_count2, st)
+    print(zeros_count, zeros_count2)

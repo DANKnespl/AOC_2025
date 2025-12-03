@@ -4,9 +4,7 @@ def range_check(rng):
     invalids = 0
     for id in range(int(ids[0]),int(ids[1])+1):
         id = str(id)
-        ln = len(id)
-#        print(id[:ln//2],id[ln//2:])
-            
+        ln = len(id)            
         if len(id)%2 == 0 and id[:ln//2]==id[ln//2:]:
             invalids += int(id)
         if not rep_check(id):
@@ -22,14 +20,9 @@ def rep_check(id):
             return False
     return True
 
-
-
-
 if __name__=="__main__":
-    
     f = open("data/day02.txt")
     ranges = f.readline().split(",")
-
     f.close()
     #ranges = "11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124".split(",")
     invalids = (0,0)
@@ -37,4 +30,4 @@ if __name__=="__main__":
         print("\n" + rng.strip() + "\n" + "-"*10)
         invs = range_check(rng)
         invalids = (invalids[0]+invs[0],invalids[1]+invs[1])
-    print(invalids, invalids[0]+invalids[1])
+    print(invalids)
