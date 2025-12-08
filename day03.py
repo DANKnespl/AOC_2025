@@ -65,7 +65,6 @@ if __name__=="__main__":
     
     
     
-    
     bank_sum = (0,0)
     print("len: "+ str(len(banks[0])))
     for bank in banks:
